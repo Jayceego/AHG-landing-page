@@ -35,9 +35,9 @@
 </head>
 
 <body class="font-poppins ">
-    <div class="hero-container h-screen text-white">
+    <div class="hero-container h-screen text-white pt-2 px-4">
         <!-- navbar -->
-        <nav class="flex justify-around items-center">
+        <nav class="flex md:justify-around items-center p-2">
             <!-- logo -->
             <svg width="186" height="58" viewBox="0 0 186 58" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="186" height="58" fill="url(#pattern0)"/>
@@ -49,7 +49,7 @@
                 </defs>
                 </svg>            
     
-            <ul class="flex w-4/12 justify-evenly font-normal text-base">
+            <ul class="lg:flex hidden w-4/12 justify-evenly font-normal text-base">
                 <li>Home</li>   
                 <li>Product</li>
                 <li>About</li>
@@ -57,11 +57,17 @@
             </ul>
 
             <!-- signup -->
-            <a href="" class="sign-up font-medium">
+            <a href="" class="sign-up ml-auto mr-5 lg:ml-0 text-sub_heading rounded-[39px] font-medium px-6 py-3 md:py-3 md:px-11  border">
                 <button>
                     Sign up
                 </button>
             </a>
+
+            <!-- hamburger -->
+            <svg class="lg:hidden" width="44" height="27" viewBox="0 0 44 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0.25H44V4.66667H0V0.25ZM11 11.2917H44V15.7083H11V11.2917ZM24.75 22.3333H44V26.75H24.75V22.3333Z" fill="white"/>
+                </svg>
+                
         </nav>
 
         <!-- content -->

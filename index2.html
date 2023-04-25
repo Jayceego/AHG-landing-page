@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>AHG landing page</title>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            fontSize: {
+                headline: '55px',
+                second_headline: '46px',
+                title: '30px',
+                paragraph: '18px',
+                sub_heading: '16px',
+                subtitle: '12px',
+
+            },
+            borderRadius: {
+                'default': '39px',
+            },
+            fontFamily: {
+                'poppins': ['Poppins', 'sans-serif'],
+            },
+            extend: {
+              colors: {
+                primary: '#30D7BA',
+                second: '#5C5C5C',
+                lightGray: '#E5E5E5',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+
+<body class="font-poppins">
+    <div class="hero-container h-screen  text-white pt-2 px-4">
+        <!-- navbar -->
+        <nav class="flex md:justify-around items-center p-2">
+            <!-- logo -->
+            <img src="./src/logo.png" alt="" srcset="">            
+    
+            <ul class="lg:flex hidden w-4/12 justify-evenly font-normal text-base">
+                <li>Home</li>   
+                <li>Product</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+
+            <!-- signup -->
+            <a href="" class="sign-up ml-auto mr-5 lg:ml-0 text-sub_heading rounded-[39px] font-medium px-6 py-3 md:py-3 md:px-11  border">
+                <button>
+                    Sign up
+                </button>
+            </a>
+
+            <!-- hamburger -->
+            <svg class="lg:hidden" width="44" height="27" viewBox="0 0 44 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0.25H44V4.66667H0V0.25ZM11 11.2917H44V15.7083H11V11.2917ZM24.75 22.3333H44V26.75H24.75V22.3333Z" fill="white"/>
+                </svg>
+                
+        </nav>
+
+        <!-- content -->
+        <div class="hero-content text-center flex flex-col items-center justify-around">
+
+            <!-- hero texts -->
+            <h1 class="">
+                Find the Best Solution in Seconds
+            </h1>
+            <p class="">
+                If debugging is the process of removing software bugs.
+            </p>
+
+            <!-- call to action -->
+            <div class="btns flex flex-col md:flex-row gap-4">
+                <button class="bg-white text-black rounded-default px-20 md:px-10 py-3">
+                    get started
+                </button>
+                <button class="border rounded-default px-20 md:px-10 py-3">
+                    try for free
+                </button>
+            </div>
+
+            <!-- hero img -->
+            <img class="hero-img" src="./src/screen.png" alt="" srcset="">
+        </div>
+
+    </div>
+</body>
+</html>

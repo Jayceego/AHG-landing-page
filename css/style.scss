@@ -259,12 +259,16 @@ p{
 }
 
 .info-container{
-    padding: 3rem 2rem;
     
     .texts{
         a{
             color: black;
         }
+    }
+
+    button{
+        width: fit-content;
+        padding: 1rem 3rem;
     }
 }
 
@@ -353,29 +357,43 @@ p{
         }
     }
 
-    .promo-container{
+    .promo-container, .info-container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         margin: 0 5vw;
 
-        .texts {
-            place-items:initial;
-            // padding: 0 7rem;
-        }
-
         .md-buttons {
             display: flex;
+        }
+
+        .texts {
+            place-items:initial;
+        }
+        .buttons{
+            display: none;
+        }
+    }
+
+    .promo-container{
+        .md-buttons {
             place-content: initial;
 
             button{
                 padding: 1rem 3vw;
             }
         }
-        .buttons{
-            display: none;
+    }
+
+    .info-container{
+        width: 80vw;
+        gap: 4rem;
+
+        .texts{
+            padding: 0;
         }
 
-        .promo-img {
+        img{
+            grid-row: 1;
         }
     }
 }

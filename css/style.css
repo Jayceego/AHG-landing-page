@@ -224,11 +224,13 @@ p {
   grid-row: 3;
 }
 
-.info-container {
-  padding: 3rem 2rem;
-}
 .info-container .texts a {
   color: black;
+}
+.info-container button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 3rem;
 }
 
 @media (min-width: 1025px) {
@@ -286,22 +288,34 @@ p {
   .service-container .cards .card p {
     margin: 0;
   }
-  .promo-container {
+  .promo-container, .info-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin: 0 5vw;
   }
-  .promo-container .texts {
+  .promo-container .md-buttons, .info-container .md-buttons {
+    display: flex;
+  }
+  .promo-container .texts, .info-container .texts {
     place-items: initial;
   }
+  .promo-container .buttons, .info-container .buttons {
+    display: none;
+  }
   .promo-container .md-buttons {
-    display: flex;
     place-content: initial;
   }
   .promo-container .md-buttons button {
     padding: 1rem 3vw;
   }
-  .promo-container .buttons {
-    display: none;
+  .info-container {
+    width: 80vw;
+    gap: 4rem;
+  }
+  .info-container .texts {
+    padding: 0;
+  }
+  .info-container img {
+    grid-row: 1;
   }
 }/*# sourceMappingURL=style.css.map */

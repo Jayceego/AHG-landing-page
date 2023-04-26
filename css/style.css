@@ -18,26 +18,27 @@
   --fs-subtitle: 12px;
 }
 
-.container {
+.hero-container {
   color: white;
   height: 100vh;
   text-align: center;
   background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+  overflow: hidden;
 }
-.container nav {
+.hero-container nav {
   display: flex;
   align-items: center;
   width: 100vw;
-  padding: 1rem 1rem 0;
+  padding: 1rem 2rem 0;
 }
-.container nav ul {
+.hero-container nav ul {
   display: none;
   font-weight: 400;
   list-style: none;
   font-size: 1rem;
   gap: 5rem;
 }
-.container nav button {
+.hero-container nav button {
   color: white;
   padding: 1rem 2rem;
   background-color: transparent;
@@ -50,33 +51,33 @@
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
 }
-.container .hero-details {
+.hero-container .hero-details {
   margin: 0 4rem;
   display: grid;
   place-items: center;
 }
-.container .hero-texts {
-  margin: 5rem 0 3rem 0;
+.hero-container .hero-texts {
+  margin: 5vh 0 3rem 0;
 }
-.container .hero-texts h1 {
+.hero-container .hero-texts h1 {
   font-size: var(--fs-second-headline);
   font-weight: 500;
   line-height: 57px;
   margin-bottom: 2rem;
 }
-.container .hero-texts p {
+.hero-container .hero-texts p {
   color: var(--lightGray);
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.container .buttons {
+.hero-container .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.container .buttons button {
+.hero-container .buttons button {
   font-weight: 500;
   font-size: 1rem;
   padding: 1rem 5.5rem;
@@ -87,42 +88,109 @@
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
 }
-.container .buttons :nth-child(2) {
+.hero-container .buttons :nth-child(2) {
   color: white;
   background-color: transparent;
 }
-.container .hero-img {
+.hero-container .hero-img {
   width: clamp(25rem, 70vw, 80rem);
   margin-top: 8vh;
 }
 
-@media (min-width: 769px) {
-  .container nav {
+.container .title {
+  font-family: poppins;
+  font-size: var(--fs-second-headline);
+  font-weight: 500;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin: 0 6rem 3rem 6rem;
+  padding-top: 4rem;
+}
+.container .cards {
+  margin: 2rem;
+}
+.container .cards .card {
+  gap: 1rem;
+  margin: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: poppins;
+  padding: 3rem 3rem;
+  flex-direction: column;
+  box-shadow: 0px 4px 31px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+}
+.container .cards .card h1 {
+  font-weight: 700;
+  font-size: var(--fs-title);
+}
+.container .cards .card p {
+  font-weight: 400;
+  font-size: var(--fs-paragraphs);
+  margin: 0 1.2rem;
+}
+.container .cards .card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: var(--fs-link);
+  font-weight: 400;
+}
+.container .cards .card2 {
+  color: white;
+  background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+}
+.container .cards .card2 a {
+  color: white;
+}
+
+@media (min-width: 1025px) {
+  .hero-container nav {
+    padding: 1rem 0rem;
     justify-content: space-around;
   }
-  .container nav ul {
+  .hero-container nav ul {
     display: flex;
   }
-  .container nav svg {
+  .hero-container nav svg {
     display: none;
   }
-  .container nav button {
+  .hero-container nav button {
     margin: 0;
     padding: 1rem 3rem;
   }
-  .container .hero-texts {
+  .hero-container .hero-texts {
     max-width: 40rem;
   }
-  .container .hero-texts h1 {
+  .hero-container .hero-texts h1 {
     font-size: var(--fs-headline);
     font-weight: 900;
     margin-top: 5rem;
   }
-  .container .buttons {
+  .hero-container .buttons {
     flex-direction: row;
     justify-content: center;
   }
-  .container .buttons button {
+  .hero-container .buttons button {
     padding: 1rem 3rem;
+  }
+  .container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  .container .title {
+    padding: 0 calc(10vw - 20px);
+    padding-top: 4rem;
+  }
+  .container .cards {
+    display: flex;
+  }
+  .container .cards .card {
+    text-align: start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    height: clamp(350px, 50vh, 500px);
   }
 }/*# sourceMappingURL=style.css.map */

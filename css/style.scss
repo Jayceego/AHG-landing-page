@@ -20,18 +20,19 @@
     --fs-subtitle: 12px;
 }
 
-.container{
+.hero-container{
     color: white;
     height: 100vh;
     text-align: center;
     background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+    overflow: hidden;
     
     // navbar
     nav{
         display: flex;
         align-items: center;
         width: 100vw;
-        padding: 1rem 1rem 0;
+        padding: 1rem 2rem 0;
 
         ul{
             display: none;
@@ -64,7 +65,7 @@
 
     // hero texts
     .hero-texts{
-        margin: 5rem 0 3rem 0;
+        margin: 5vh 0 3rem 0;
 
         h1{
             font-size: var(--fs-second-headline);
@@ -105,9 +106,65 @@
         }
     }
 
+    // hero img
     .hero-img{
         width: clamp(25rem, 70vw, 80rem);
         margin-top: 8vh;
+    }
+} 
+
+.container{
+    .title{
+        font-family: poppins;
+        font-size: var(--fs-second-headline);
+        font-weight: 500;
+        line-height: 57px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        margin: 0 6rem 3rem 6rem;
+        padding-top: 4rem;
+    }
+
+    .cards{
+        margin: 2rem;
+
+        .card{
+            gap: 1rem;
+            margin: 1rem;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-family: poppins;
+            padding: 3rem 3rem;
+            flex-direction: column;
+            box-shadow: 0px 4px 31px -3px rgba(0,0,0,0.1);
+            margin-bottom: 5rem;
+    
+            h1{
+                font-weight: 700;
+                font-size: var(--fs-title);
+            }
+            p{
+                font-weight: 400;
+                font-size: var(--fs-paragraphs);
+                margin: 0 1.2rem ;
+            }
+            a{
+                color: var(--primary);
+                text-decoration: none;
+                font-size: var(--fs-link);
+                font-weight: 400;
+            }
+        }
+
+        .card2{
+            color: white;
+            background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+            
+            a{
+                color: white;
+            }
+        }
     }
 }
 
@@ -124,8 +181,14 @@
 
 // tablet 
 @media (min-width: 769px){
-    .container{
+    
+}
+
+// desktop 
+@media (min-width: 1025px){
+    .hero-container{
         nav{
+            padding: 1rem 0rem;
             justify-content: space-around;
 
             ul{
@@ -158,10 +221,25 @@
             }
         }
     }
-}
+    
+    .container{
+        height: 100vh;
 
-// desktop 
-@media (min-width: 1025px){
+        .title{
+            padding: 0 clamp();
+            padding-top: 4rem;
+        }
+        .cards{
+            display: flex;
+
+            .card{
+                text-align: start;
+                justify-content: flex-start;
+                margin-bottom: 0;
+                height: clamp(350px, 50vh, 500px);
+            }
+        }
+    }
 }
 
 // large desktop 

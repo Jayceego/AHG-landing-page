@@ -203,8 +203,14 @@
         height: auto;
     }
 
+    .md-buttons{
+        display: none;
+    }
     .buttons{
         display: grid;
+    }
+
+    .buttons, .md-buttons{
         gap: 1rem;
         place-content: center;
         grid-row: 3;
@@ -247,13 +253,7 @@
 
 // tablet 
 @media (min-width: 769px){
-    .promo-container{
-        .texts{
-            p{
-                text-align: center;
-            }
-        }
-    }
+
 }
 
 // desktop 
@@ -318,6 +318,32 @@
                     margin: 0;
                 }
             }
+        }
+    }
+
+    .promo-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin: 0 5vw;
+
+        .texts {
+            place-items:initial;
+            // padding: 0 7rem;
+        }
+
+        .md-buttons {
+            display: flex;
+            place-content: initial;
+
+            button{
+                padding: 1rem 3vw;
+            }
+        }
+        .buttons{
+            display: none;
+        }
+
+        .promo-img {
         }
     }
 }

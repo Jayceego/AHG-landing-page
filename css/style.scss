@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+// formatting
 *{
     box-sizing: border-box;
     padding: 0;
@@ -7,8 +8,76 @@
     font-family: poppins;
 }
 
+// to remove all default underlines
+a{
+    text-decoration: none;
+}
+
+// to make it responsive
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+// default button format
+button{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 6rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn{
+    color: white;
+    background-color: var(--lightBlue);
+    border: none;
+}
+
+.secondary-btn{
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background: transparent;
+}
+
+h1{
+    font-size: var(--fs-second-headline);
+    font-weight: 500;
+    line-height: 57px;
+}
+p{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.texts{
+    display: grid;
+    gap: 2rem;
+    padding: 0 clamp(50px,10vw, 60px);
+}
+
+// to hide buttons from small devices 
+.md-buttons{
+    display: none;
+}
+
+.container{
+    display: grid;
+    gap: 1vh;
+    place-items: center;
+    grid-template-rows: auto;
+    height: 100vh;
+    padding: 3rem 2rem;
+}
+
+// variables
 :root{
-    --primary: #30D7BA;
+    --primary  : #30D7BA;
     --lightBlue: #03D6F3;
     --darkBlue : #112D57;
     --secondary: '#5C5C5C';
@@ -55,6 +124,7 @@
             -moz-border-radius: 2rem;
             -ms-border-radius: 2rem;
             -o-border-radius: 2rem;
+            box-shadow: none;
         }
     }
 
@@ -70,15 +140,10 @@
         margin: 5vh 0;
 
         h1{
-            font-size: var(--fs-second-headline);
-            font-weight: 500;
-            line-height: 57px;
             margin-bottom: 2rem;
         }
         p{
             color: var(--lightGray);
-            font-size: 1rem;
-            font-weight: 700;
             margin-bottom: 1rem;
         }
     }
@@ -106,13 +171,12 @@
         :nth-child(2){
             color: white;
             background-color: transparent;
+            box-shadow: none;
         }
     }
 
     // hero img
     .hero-img{
-        max-width: 100%;
-        height: auto;
         padding: 3rem;
     }
 } 
@@ -175,39 +239,14 @@
 }
 
 .promo-container{
-    display: grid;
-    gap: 1vh;
-    place-items: center;
-    grid-template-rows: auto;
-    height: 100vh;
-    padding: 3rem 2rem;
-
+    
     .texts{
         display: grid;
         place-items: center;
         gap: 2rem;
         padding: 0 clamp(50px,10vw, 60px);
-
-        h1{
-            font-size: var(--fs-second-headline);
-            font-weight: 500;
-            line-height: 57px;
-        }
-        p{
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 20px;
-        }
     }
 
-    .promo-img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .md-buttons{
-        display: none;
-    }
     .buttons{
         display: grid;
     }
@@ -216,29 +255,15 @@
         gap: 1rem;
         place-content: center;
         grid-row: 3;
+    }
+}
 
-        button{
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 1rem 6rem;
-            border-radius: 2rem;
-            -webkit-border-radius: 2rem;
-            -moz-border-radius: 2rem;
-            -ms-border-radius: 2rem;
-            -o-border-radius: 2rem;
-            box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-        }
-
-        :nth-child(1){
-            color: white;
-            background-color: var(--lightBlue);
-            border: none;
-        }
-
-        :nth-child(2){
-            color: var(--primary);
-            border: 1px solid var(--primary);
-            background: transparent;
+.info-container{
+    padding: 3rem 2rem;
+    
+    .texts{
+        a{
+            color: black;
         }
     }
 }

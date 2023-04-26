@@ -6,6 +6,70 @@
   font-family: poppins;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 6rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn {
+  color: white;
+  background-color: var(--lightBlue);
+  border: none;
+}
+
+.secondary-btn {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background: transparent;
+}
+
+h1 {
+  font-size: var(--fs-second-headline);
+  font-weight: 500;
+  line-height: 57px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.texts {
+  display: grid;
+  gap: 2rem;
+  padding: 0 clamp(50px, 10vw, 60px);
+}
+
+.md-buttons {
+  display: none;
+}
+
+.container {
+  display: grid;
+  gap: 1vh;
+  place-items: center;
+  grid-template-rows: auto;
+  height: 100vh;
+  padding: 3rem 2rem;
+}
+
 :root {
   --primary: #30D7BA;
   --lightBlue: #03D6F3;
@@ -52,6 +116,7 @@
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+  box-shadow: none;
 }
 .hero-container .hero-details {
   margin: 0 4rem;
@@ -62,15 +127,10 @@
   margin: 5vh 0;
 }
 .hero-container .hero-texts h1 {
-  font-size: var(--fs-second-headline);
-  font-weight: 500;
-  line-height: 57px;
   margin-bottom: 2rem;
 }
 .hero-container .hero-texts p {
   color: var(--lightGray);
-  font-size: 1rem;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 .hero-container .buttons {
@@ -94,10 +154,9 @@
 .hero-container .buttons :nth-child(2) {
   color: white;
   background-color: transparent;
+  box-shadow: none;
 }
 .hero-container .hero-img {
-  max-width: 100%;
-  height: auto;
   padding: 3rem;
 }
 
@@ -150,36 +209,11 @@
   color: white;
 }
 
-.promo-container {
-  display: grid;
-  gap: 1vh;
-  place-items: center;
-  grid-template-rows: auto;
-  height: 100vh;
-  padding: 3rem 2rem;
-}
 .promo-container .texts {
   display: grid;
   place-items: center;
   gap: 2rem;
   padding: 0 clamp(50px, 10vw, 60px);
-}
-.promo-container .texts h1 {
-  font-size: var(--fs-second-headline);
-  font-weight: 500;
-  line-height: 57px;
-}
-.promo-container .texts p {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 20px;
-}
-.promo-container .promo-img {
-  max-width: 100%;
-  height: auto;
-}
-.promo-container .md-buttons {
-  display: none;
 }
 .promo-container .buttons {
   display: grid;
@@ -189,26 +223,12 @@
   place-content: center;
   grid-row: 3;
 }
-.promo-container .buttons button, .promo-container .md-buttons button {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 1rem 6rem;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
-  box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+
+.info-container {
+  padding: 3rem 2rem;
 }
-.promo-container .buttons :nth-child(1), .promo-container .md-buttons :nth-child(1) {
-  color: white;
-  background-color: var(--lightBlue);
-  border: none;
-}
-.promo-container .buttons :nth-child(2), .promo-container .md-buttons :nth-child(2) {
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  background: transparent;
+.info-container .texts a {
+  color: black;
 }
 
 @media (min-width: 1025px) {

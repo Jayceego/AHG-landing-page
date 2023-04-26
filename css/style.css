@@ -9,12 +9,13 @@
 :root {
   --primary: #30D7BA;
   --lightBlue: #03D6F3;
+  --darkBlue: #112D57;
   --secondary: "#5C5C5C";
   --lightGray: #E5E5E5;
-  --fs-headline: 55px;
-  --fs-second-headline: 46px;
-  --fs-title: 30px;
-  --fs-paragraphs: 18px;
+  --fs-headline: clamp(10px,10vw,55px);
+  --fs-second-headline: clamp(10px,10vw,46px);
+  --fs-title: clamp(10px,10vw,30px);
+  --fs-paragraphs: clamp(10px,10vw,18px);
   --fs-link: 15px;
   --fs-subtitle: 12px;
 }
@@ -30,18 +31,18 @@
   display: flex;
   align-items: center;
   width: 100vw;
-  padding: 1rem 2rem 0;
+  padding: 1rem 1.5rem 0;
 }
 .hero-container nav ul {
   display: none;
   font-weight: 400;
   list-style: none;
   font-size: 1rem;
-  gap: 5rem;
+  gap: 5vw;
 }
 .hero-container nav button {
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.8rem clamp(1.8rem, 4vw, 3rem);
   background-color: transparent;
   margin-left: auto;
   margin-right: 1rem;
@@ -58,7 +59,7 @@
   place-items: center;
 }
 .hero-container .hero-texts {
-  margin: 5vh 0 3rem 0;
+  margin: 5vh 0;
 }
 .hero-container .hero-texts h1 {
   font-size: var(--fs-second-headline);
@@ -79,9 +80,10 @@
   gap: 1rem;
 }
 .hero-container .buttons button {
+  color: var(--darkBlue);
   font-weight: 500;
   font-size: 1rem;
-  padding: 1rem 5.5rem;
+  padding: 1rem clamp(3rem, 20vw, 5.5rem);
   border: 1px solid white;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -96,7 +98,6 @@
 .hero-container .hero-img {
   max-width: 100%;
   height: auto;
-  margin-top: 1.5rem;
   padding: 3rem;
 }
 
@@ -107,21 +108,22 @@
   line-height: 57px;
   text-align: center;
   letter-spacing: 0.2px;
-  margin: 0 6rem 3rem 6rem;
+  margin: 0 calc(10px + 15vw);
+  margin-bottom: 3rem;
   padding-top: 4rem;
 }
 .service-container .cards {
   margin: 2rem;
 }
 .service-container .cards .card {
-  gap: 1rem;
+  gap: 2rem;
   margin: 1rem;
   display: flex;
   text-align: center;
   align-items: center;
   font-family: poppins;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 7vh;
   padding: 3rem 3rem;
   box-shadow: 0px 4px 31px -3px rgba(0, 0, 0, 0.1);
 }
@@ -150,17 +152,17 @@
 
 .promo-container {
   display: grid;
-  gap: 2rem;
+  gap: 1vh;
   place-items: center;
   grid-template-rows: auto;
   height: 100vh;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .promo-container .texts {
   display: grid;
   place-items: center;
   gap: 2rem;
-  padding: 0 3.5rem;
+  padding: 0 clamp(50px, 10vw, 60px);
 }
 .promo-container .texts h1 {
   font-size: var(--fs-second-headline);
@@ -222,7 +224,6 @@
   }
   .hero-container nav button {
     margin: 0;
-    padding: 1rem 3rem;
   }
   .hero-container .hero-texts {
     max-width: 40rem;
@@ -247,16 +248,20 @@
     display: grid;
     place-content: center;
   }
+  .service-container .title {
+    margin-bottom: 3vh;
+  }
   .service-container .cards {
     display: flex;
-    width: 85vw;
+    width: 80vw;
+    height: -moz-min-content;
+    height: min-content;
   }
   .service-container .cards .card {
     text-align: start;
     justify-content: space-around;
     align-items: flex-start;
-    margin-bottom: 0;
-    height: clamp(350px, 50vh, 500px);
+    margin-bottom: 1rem;
   }
   .service-container .cards .card p {
     margin: 0;

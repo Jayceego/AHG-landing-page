@@ -8,9 +8,20 @@
     font-family: poppins;
 }
 
-// to remove all default underlines
-a{
-    text-decoration: none;
+// variables
+:root{
+    --primary  : #30D7BA;
+    --lightBlue: #03D6F3;
+    --darkBlue : #112D57;
+    --secondary: '#5C5C5C';
+    --lightGray: #E5E5E5;
+
+    --fs-headline: clamp(10px,10vw,55px);
+    --fs-second-headline: clamp(10px,10vw,46px);
+    --fs-title: clamp(10px,10vw,30px);
+    --fs-paragraphs: clamp(10px,10vw,18px);
+    --fs-link: 15px;
+    --fs-subtitle: 12px;
 }
 
 // to make it responsive
@@ -44,29 +55,37 @@ button{
     background: transparent;
 }
 
-h1{
-    font-size: var(--fs-second-headline);
-    font-weight: 500;
-    line-height: 57px;
-}
-p{
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 20px;
-}
-
-.texts{
-    display: grid;
-    gap: 2rem;
-    padding: 0 clamp(50px,10vw, 60px);
-}
-
 // to hide buttons from small devices 
 .md-buttons{
     display: none;
 }
 
-.container{
+// default typhography 
+h1{
+    font-size: var(--fs-second-headline);
+    font-weight: 500;
+    line-height: 57px;
+}
+
+p{
+    color: var(--secondary);
+    font-size: var(--fs-paragraphs);
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+.texts{
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    padding: 0 clamp(50px,10vw, 60px);
+}
+
+// wrapper format
+.wrapper{
     display: grid;
     gap: 1vh;
     place-items: center;
@@ -75,22 +94,7 @@ p{
     padding: 3rem 2rem;
 }
 
-// variables
-:root{
-    --primary  : #30D7BA;
-    --lightBlue: #03D6F3;
-    --darkBlue : #112D57;
-    --secondary: '#5C5C5C';
-    --lightGray: #E5E5E5;
-
-    --fs-headline: clamp(10px,10vw,55px);
-    --fs-second-headline: clamp(10px,10vw,46px);
-    --fs-title: clamp(10px,10vw,30px);
-    --fs-paragraphs: clamp(10px,10vw,18px);
-    --fs-link: 15px;
-    --fs-subtitle: 12px;
-}
-
+// Custom
 .hero-container{
     color: white;
     height: 100vh;
@@ -238,7 +242,7 @@ p{
     }
 }
 
-.promo-container{
+.promo-container, .ads-container{
     
     .texts{
         display: grid;
@@ -259,7 +263,8 @@ p{
 }
 
 .info-container{
-    
+    gap: 0;
+
     .texts{
         a{
             color: black;
@@ -272,6 +277,16 @@ p{
     }
 }
 
+.ads-container{
+    .texts{
+        text-align: center;
+        padding: 0 2rem;
+    }
+}
+
+
+
+// Media Responsiveness
 // mobile
 @media (max-width: 480px) {
 
@@ -357,7 +372,7 @@ p{
         }
     }
 
-    .promo-container, .info-container{
+    .promo-container, .info-container, .ads-container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         margin: 0 5vw;
@@ -367,6 +382,7 @@ p{
         }
 
         .texts {
+            text-align: left;
             place-items:initial;
         }
         .buttons{
@@ -374,7 +390,7 @@ p{
         }
     }
 
-    .promo-container{
+    .promo-container, .ads-container{
         .md-buttons {
             place-content: initial;
 
@@ -385,8 +401,8 @@ p{
     }
 
     .info-container{
-        width: 80vw;
-        gap: 4rem;
+        margin: 0 10rem;
+        gap: 3rem;
 
         .texts{
             padding: 0;
@@ -396,6 +412,13 @@ p{
             grid-row: 1;
         }
     }
+
+    .ads-container{
+        .texts{
+            text-align: left;
+        }
+
+    }  
 }
 
 // large desktop 

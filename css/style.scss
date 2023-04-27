@@ -10,10 +10,12 @@
     scroll-behavior: smooth;
 }
 
-// html{
-//     max-width: 1200px;
-//     height: auto;
-// }
+body{
+    display: grid;
+    place-content: center;
+    max-width: 1200px;
+    height: auto;
+}
 
 // variables
 :root{
@@ -408,6 +410,7 @@ a{
 
     .buttons{
         display: grid;
+        place-items: center;
         gap: 1rem;
         width: 90vw;
 
@@ -417,7 +420,7 @@ a{
             -moz-border-radius: 7px;
             -ms-border-radius: 7px;
             -o-border-radius: 7px;
-}
+        }
 
         input{
             box-shadow: none;

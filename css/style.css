@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   font-family: poppins;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -26,7 +27,7 @@ img {
   height: auto;
 }
 
-button {
+button, input {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem clamp(1rem, 18vw, 6rem);
@@ -68,6 +69,7 @@ p {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .texts {
@@ -241,6 +243,9 @@ a {
   width: fit-content;
   padding: 1rem 3rem;
 }
+.info-container img {
+  max-width: 80%;
+}
 
 .ads-container .texts {
   text-align: center;
@@ -251,7 +256,6 @@ a {
   display: grid;
   place-items: center;
   gap: 2rem;
-  height: 100vh;
   padding: 3rem 0;
   text-align: center;
 }
@@ -321,6 +325,62 @@ a {
 }
 .pricing-container .cards-wrapper .education .details :nth-last-child(1) {
   color: var(--secondary);
+}
+
+.subscribe-container {
+  height: 50vh;
+  display: grid;
+  gap: 4rem;
+  place-content: center;
+  text-align: center;
+}
+.subscribe-container .texts {
+  gap: 2rem;
+}
+.subscribe-container .buttons {
+  display: grid;
+  gap: 1rem;
+  width: 90vw;
+}
+.subscribe-container .buttons button, .subscribe-container .buttons input {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.subscribe-container .buttons input {
+  box-shadow: none;
+  font-weight: 700;
+  font-family: roboto;
+  border: #D0D0D0;
+  background-color: #efefef;
+}
+.subscribe-container .buttons .email-input::-moz-placeholder {
+  text-align: center;
+}
+.subscribe-container .buttons .email-input::placeholder {
+  text-align: center;
+}
+
+.footer {
+  padding: 10vw;
+  color: white;
+  background-color: var(--darkBlue);
+}
+.footer iframe {
+  border-radius: 22px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+}
+.footer .contacts .socmed, .footer .contacts .location, .footer .contacts .phone {
+  display: flex;
+  justify-content: start;
+}
+.footer .contacts .socmed {
+  justify-content: space-around;
 }
 
 @media (min-width: 1025px) {
@@ -416,5 +476,21 @@ a {
     display: flex;
     justify-content: center;
     gap: 3rem;
+  }
+  .subscribe-container .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .subscribe-container .buttons .primary-btn {
+    padding: 1rem clamp(1rem, 18vw, 3rem);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -384,7 +384,18 @@ a{
         .education{
             .details{
                 :nth-last-child(1){
-                    color: var(--secondary);
+                    color: rgb(132, 132, 132);
+                }
+                :nth-last-child(2){
+                    color: rgb(132, 132, 132);
+                }
+            }
+        }
+
+        .professional{
+            .details{
+                :nth-last-child(1){
+                    color: rgb(132, 132, 132);
                 }
             }
         }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,12 +13,12 @@
   --darkBlue: #112D57;
   --secondary: "#5C5C5C";
   --lightGray: #E5E5E5;
-  --fs-headline: clamp(10px,10vw,55px);
-  --fs-second-headline: clamp(10px,10vw,46px);
-  --fs-title: clamp(10px,10vw,30px);
+  --fs-headline: clamp(10px,20vw,55px);
+  --fs-second-headline: clamp(10px,20vw,46px);
+  --fs-title: clamp(10px,20vw,30px);
   --fs-paragraphs: clamp(10px,10vw,18px);
-  --fs-link: 15px;
-  --fs-subtitle: 12px;
+  --fs-link: clamp(10px,10vw,15px);
+  --fs-subtitle: clamp(10px,10vw,12px);
 }
 
 img {
@@ -28,7 +29,7 @@ img {
 button {
   font-size: 1rem;
   font-weight: 500;
-  padding: 1rem 6rem;
+  padding: 1rem clamp(1rem, 18vw, 6rem);
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
   -moz-border-radius: 2rem;
@@ -107,7 +108,7 @@ a {
 }
 .hero-container nav button {
   color: white;
-  padding: 0.8rem clamp(1.8rem, 4vw, 3rem);
+  padding: 0.8rem clamp(1rem, 4vw, 3rem);
   background-color: transparent;
   margin-left: auto;
   margin-right: 1rem;
@@ -118,6 +119,10 @@ a {
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
   box-shadow: none;
+  font-size: clamp(10px, 10vw, 16px);
+}
+.hero-container nav svg {
+  min-width: 44px;
 }
 .hero-container .hero-details {
   margin: 0 4rem;
@@ -242,6 +247,82 @@ a {
   padding: 0 2rem;
 }
 
+.pricing-container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  height: 100vh;
+  padding: 3rem 0;
+  text-align: center;
+}
+.pricing-container .texts {
+  gap: 1rem;
+}
+.pricing-container .cards-wrapper {
+  display: grid;
+  gap: 2rem;
+}
+.pricing-container .cards-wrapper .card {
+  display: grid;
+  place-items: center;
+  gap: 3vh;
+  padding: 2rem;
+  border: 1px solid var(--lightGray);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.pricing-container .cards-wrapper .card .title h1 {
+  font-size: var(--fs-title);
+  font-weight: 700;
+  line-height: 40px;
+}
+.pricing-container .cards-wrapper .card .title p {
+  font-family: roboto;
+  line-height: 18px;
+  font-size: 12px;
+  color: var(--secondary);
+}
+.pricing-container .cards-wrapper .card .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.pricing-container .cards-wrapper .card .price h1 {
+  font-size: var(--fs-headline);
+  color: var(--primary);
+  font-weight: 900;
+}
+.pricing-container .cards-wrapper .card .price .sub-text {
+  text-align: left;
+}
+.pricing-container .cards-wrapper .card .price .sub-text h1 {
+  font-size: var(--fs-title);
+  line-height: 33px;
+}
+.pricing-container .cards-wrapper .card .details {
+  display: grid;
+  gap: 1vh;
+}
+.pricing-container .cards-wrapper .card .details p {
+  color: black;
+  font-size: var(--fs-link);
+  line-height: 27px;
+  font-weight: 400;
+}
+.pricing-container .cards-wrapper .card button {
+  padding: 1rem 6vh;
+}
+.pricing-container .cards-wrapper .card img {
+  max-width: 70%;
+}
+.pricing-container .cards-wrapper .education .details :nth-last-child(1) {
+  color: var(--secondary);
+}
+
 @media (min-width: 1025px) {
   .hero-container nav {
     padding: 1rem 0rem;
@@ -330,5 +411,10 @@ a {
   }
   .ads-container .texts {
     text-align: left;
+  }
+  .pricing-container .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

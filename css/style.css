@@ -8,13 +8,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  display: grid;
-  place-content: center;
-  max-width: 1200px;
-  height: auto;
-}
-
 :root {
   --primary: #30D7BA;
   --lightBlue: #03D6F3;

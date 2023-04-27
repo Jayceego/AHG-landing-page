@@ -392,21 +392,22 @@ a{
 }
 
 .subscribe-container{
-    height: 50vh;
     display: grid;
+    height: 50vh;
     gap: 4rem;
-    place-content: center;
+    place-items: center;
     text-align: center;
 
     .texts{
         gap: 2rem;
+        align-self: end;
     }
 
     .buttons{
         display: grid;
-        place-items: center;
+        align-self: start;
+        place-content: center;
         gap: 1rem;
-        width: 90vw;
 
         button, input{
             border-radius: 7px;
@@ -431,17 +432,40 @@ a{
 }
 
 .footer{
-    padding: 10vw;
+    display: grid;
+    gap: 5rem;
+    padding: clamp(3rem, 10vw, 4rem);
     color: white;
     background-color: var(--darkBlue);
 
     .pages-container{
+        display: grid;
 
+        p{
+            display: none;
+        }
+        .pages{
+            display: flex;
+            justify-content: space-around;
+
+            .left, .right{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                
+                a{
+                    font-family: var(--fs-link);
+                    font-weight: 400;
+                    line-height: 27px;
+                }
+            }
+        }
     }
 
     iframe{
-        // width: calc(100vw - 500px);
-        // height: clamp( 50px, 50vw, 300px);
+        place-self: center;
+        width: clamp(100px, 90vw, 340px);
         border-radius: 22px;
         -webkit-border-radius: 22px;
         -moz-border-radius: 22px;
@@ -450,13 +474,28 @@ a{
 }
 
     .contacts{
+        display: grid;
+        gap: 2rem;
+
         .socmed,.location,.phone{
             display: flex;
+            gap: .5rem;
             justify-content: start;
+            align-items: center
+        }
+        .phone{
+            svg{
+                margin: 0 .3rem;
+            }
         }
         .socmed{
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
+    }
+
+    .copyright{
+        color: var(--secondary);
+        place-self: center;
     }
 }
 
@@ -524,6 +563,7 @@ a{
         place-content: center;
 
         .title{
+            margin-top: 2rem;
             margin-bottom: 3vh;
         }
 
@@ -603,6 +643,7 @@ a{
     }
     
     .subscribe-container{
+
         .buttons{
             display: flex;
             justify-content: center;
@@ -622,8 +663,34 @@ a{
     .footer{
         display: flex;
         justify-content: space-around;
-    }
 
+        .pages-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p{
+                display: block;
+            }
+            .pages{
+                justify-content: space-between;
+            }
+        }
+
+        .copyright{
+            display: none;
+        }
+
+        .contacts{
+            gap: 0;
+            
+            .socmed{
+                justify-content: start;
+                gap: 2rem;
+                margin-left: 0.3rem;
+            }
+        }
+    }
 }
 
 // large desktop 
